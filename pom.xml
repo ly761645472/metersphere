@@ -6,7 +6,8 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.5.7</version>
+        <!--这个不能升级，会有兼容性问题 -->
+        <version>3.2.12</version>
         <relativePath/>
     </parent>
 
@@ -18,108 +19,136 @@
     <description>MeterSphere</description>
 
     <properties>
-        <revision>3.x</revision>
-        <java.version>21</java.version>
-        <platform-plugin-sdk.version>1.5.0</platform-plugin-sdk.version>
-        <shiro.version>2.0.2</shiro.version>
-        <java-websocket.version>1.5.4</java-websocket.version>
-        <easyexcel.version>3.3.3</easyexcel.version>
+        <revision>2.10</revision>
+        <java.version>17</java.version>
+        <spring-cloud.version>2023.0.1</spring-cloud.version>
+        <dubbo.version>2.7.22</dubbo.version>
+        <platform-plugin-sdk.version>1.6.0</platform-plugin-sdk.version>
+        <shiro.version>2.0.1</shiro.version>
+        <java-websocket.version>1.5.3</java-websocket.version>
+        <easyexcel.version>3.1.1</easyexcel.version>
         <dom4j.version>2.1.4</dom4j.version>
-        <guava.version>33.0.0-jre</guava.version>
-        <pagehelper.version>6.1.0</pagehelper.version>
-        <metersphere-jmeter-functions.version>3.0</metersphere-jmeter-functions.version>
-        <metersphere-jmeter-assertions.version>3.2</metersphere-jmeter-assertions.version>
-        <quartz-starter.version>1.0.7</quartz-starter.version>
-        <redisson-starter.version>3.49.0</redisson-starter.version>
+        <guava.version>32.0.1-jre</guava.version>
+        <pagehelper.version>6.0.0</pagehelper.version>
+        <metersphere-jmeter-functions.version>1.5</metersphere-jmeter-functions.version>
+        <quartz-starter.version>1.0.8</quartz-starter.version>
+        <redisson-starter.version>3.25.0</redisson-starter.version>
+        <guice.version>5.1.0</guice.version>
         <mybatis-starter.version>3.0.3</mybatis-starter.version>
         <reflections.version>0.10.2</reflections.version>
-        <commons-io.version>2.15.1</commons-io.version>
-        <commons-text.version>1.11.0</commons-text.version>
+        <bcprov-jdk15on.version>1.70</bcprov-jdk15on.version>
+        <!--   这个包不能升级，有兼容问题    -->
+        <commons-io.version>2.11.0</commons-io.version>
+        <commons-text.version>1.10.0</commons-text.version>
+        <commons-collections4.version>4.4</commons-collections4.version>
         <xstream.version>1.4.20</xstream.version>
-        <xmlbeans.version>5.1.1</xmlbeans.version>
-        <swagger-parser.version>2.1.21</swagger-parser.version>
-        <swagger.version>2.2.21</swagger.version>
-        <springdoc-openapi-ui.version>2.7.0</springdoc-openapi-ui.version>
+        <xmlbeans.version>3.1.0</xmlbeans.version>
+        <swagger-parser.version>2.1.12</swagger-parser.version>
+        <springdoc-openapi-ui.version>2.1.0</springdoc-openapi-ui.version>
+        <rhino.version>1.7.14</rhino.version>
+        <jsoup.version>1.15.3</jsoup.version>
         <commonmark.version>0.19.0</commonmark.version>
-        <commons-compress.version>1.26.0</commons-compress.version>
+        <commons-compress.version>1.21</commons-compress.version>
         <htmlcleaner.version>2.29</htmlcleaner.version>
         <xmindjbehaveplugin.version>0.8</xmindjbehaveplugin.version>
         <metersphere-plugin-core.version>2.0</metersphere-plugin-core.version>
-        <plexus.version>4.0.0</plexus.version>
+        <plexus.version>3.0.24</plexus.version>
         <common-random.version>1.0.21</common-random.version>
         <generex.version>1.0.2</generex.version>
+        <json-lib.version>2.4</json-lib.version>
         <json-schema-validator.version>2.2.14</json-schema-validator.version>
         <xz.version>1.9</xz.version>
-        <flatten.version>1.6.0</flatten.version>
-        <jmeter.version>5.6.3</jmeter.version>
-        <codehaus-groovy.version>3.0.20</codehaus-groovy.version>
-        <metersphere-scriptengine.version>1.2.2</metersphere-scriptengine.version>
+        <flatten.version>1.2.7</flatten.version>
+        <jmeter.version>5.5</jmeter.version>
+        <codehaus-groovy.version>3.0.11</codehaus-groovy.version>
+        <jython.version>2.7.0</jython.version>
         <docker-java.version>3.3.4</docker-java.version>
+        <selenium-htmlunit.version>4.10.0</selenium-htmlunit.version>
+        <selenium.version>4.10.0</selenium.version>
+        <jmeter-plugins-webdriver.version>4.10.0</jmeter-plugins-webdriver.version>
+        <opentelemetry.version>1.26.0</opentelemetry.version>
+        <oracle-database.version>19.7.0.0</oracle-database.version>
+        <zookeeper.version>3.8.3</zookeeper.version>
         <commons-beanutils.version>1.9.4</commons-beanutils.version>
+        <jmeter-plugins-dubbo.version>2.7.17</jmeter-plugins-dubbo.version>
         <hessian-lite.version>3.2.13</hessian-lite.version>
+        <avro.version>1.11.4</avro.version>
         <dec.version>0.1.2</dec.version>
         <dingtalk-sdk.version>2.0.0</dingtalk-sdk.version>
-        <dingtalk-client.version>2.0.77</dingtalk-client.version>
-        <minio.version>8.5.13</minio.version>
-        <commons-collections4.version>4.4</commons-collections4.version>
-        <kubernetes-client.version>6.13.4</kubernetes-client.version>
-        <jgit.version>6.8.0.202311291450-r</jgit.version>
-        <embedded.version>3.1.6</embedded.version>
-        <otp-java.version>2.0.1</otp-java.version>
-        <mockserver-client-java.version>5.15.0</mockserver-client-java.version>
-        <mysql-connector-java.version>8.3.0</mysql-connector-java.version>
+        <org-json.version>20231013</org-json.version>
+        <jmeter-plugins-dubbo.version>2.7.17</jmeter-plugins-dubbo.version>
+        <nacos.version>1.4.6</nacos.version>
+        <minio.version>8.5.3</minio.version>
+        <hikaricp.version>5.0.1</hikaricp.version>
+        <xmlgraphics-commons.version>2.9</xmlgraphics-commons.version>
+        <commons-fileupload.version>1.5</commons-fileupload.version>
+        <graalvmjs.version>22.3.1</graalvmjs.version>
+        <httpclient.version>4.5.14</httpclient.version>
+        <kafka.version>3.8.1</kafka.version>
         <!-- frontend -->
         <frontend-maven-plugin.version>1.12.1</frontend-maven-plugin.version>
         <node.version>v20.8.1</node.version>
-        <pnpm.version>8.4.0</pnpm.version>
+        <npm.version>8.4.0</npm.version>
         <!--        -->
         <skipAntRunForJenkins>false</skipAntRunForJenkins>
-        <jacoco.version>0.8.12</jacoco.version>
-        <pf4j.version>3.10.0</pf4j.version>
-        <!--   sonar     -->
+        <commons-dbcp2-version>2.9.0</commons-dbcp2-version>
+        <jgit-version>6.7.0.202309050840-r</jgit-version>
+        <!-- sonar -->
         <sonar.organization>metersphere</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-
-        <!-- 用于解析 ${__jexl2} 和 ${__jexl3} 函数变量 -->
-        <commons-jexl.version>2.1.1</commons-jexl.version>
-        <commons-jexl3.version>3.3</commons-jexl3.version>
-        <revision>3.x</revision>
-        <monitoring-engine.revision>3.3</monitoring-engine.revision>
-        <swagger-core-jakarta.revision>2.2.20</swagger-core-jakarta.revision>
-        <velocity.revision>2.3</velocity.revision>
-
-        <spring-ai.version>1.0.3</spring-ai.version>
-        <ansj_seg.version>5.1.6</ansj_seg.version>
-        <flex-mark.version>0.64.0</flex-mark.version>
     </properties>
 
     <modules>
-        <module>frontend</module>
-        <module>backend</module>
+        <module>framework</module>
+        <module>api-test</module>
+        <module>performance-test</module>
+        <module>project-management</module>
+        <module>report-stat</module>
+        <module>system-setting</module>
+        <module>test-track</module>
+        <module>workstation</module>
     </modules>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.projectreactor</groupId>
+            <artifactId>reactor-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <build>
-        <resources>
-            <resource>
-                <directory>src/main/java</directory>
-                <includes>
-                    <include>**/*.properties</include>
-                    <include>**/*.xml</include>
-                    <include>**/*.json</include>
-                    <include>**/*.tpl</include>
-                    <include>**/*.js</include>
-                </includes>
-                <filtering>false</filtering>
-            </resource>
-            <resource>
-                <directory>src/main/resources</directory>
-                <includes>
-                    <include>**/*</include>
-                </includes>
-                <filtering>false</filtering>
-            </resource>
-        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -153,51 +182,12 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>${jacoco.version}</version>
-                <configuration>
-                    <excludes>
-                        <exclude>io/metersphere/*/mapper/**</exclude>
-                        <exclude>io/metersphere/*/domain/**</exclude>
-                        <exclude>io/metersphere/handler/**</exclude>
-                        <exclude>io/metersphere/**/dto/**</exclude>
-                        <exclude>io/metersphere/**/config/**</exclude>
-                        <exclude>io/metersphere/**/constants/**</exclude>
-                        <exclude>io/metersphere/**/utils/**</exclude>
-                        <exclude>io/metersphere/*/excel/**</exclude>
-                        <exclude>io/metersphere/sdk/**</exclude>
-                        <exclude>io/metersphere/provider/**</exclude>
-                        <exclude>io/metersphere/plugin/**</exclude>
-                        <exclude>io/metersphere/*/job/**</exclude>
-                        <exclude>io/metersphere/system/notice/**</exclude>
-                        <exclude>io/metersphere/system/schedule/**</exclude>
-                        <exclude>io/metersphere/system/security/**</exclude>
-                        <exclude>io/metersphere/system/controller/handler/**</exclude>
-                    </excludes>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>prepare-agent</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>report</id>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>report</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
     </build>
     <distributionManagement>
         <repository>
-            <id>metersphere-public</id>
-            <url>https://repository.fit2cloud.com/repository/metersphere/</url>
+            <id>fit2cloud-public</id>
+            <url>https://repository.fit2cloud.com/content/repositories/fit2cloud-public</url>
         </repository>
     </distributionManagement>
     <repositories>
@@ -206,33 +196,8 @@
             <url>https://repo.maven.apache.org/maven2</url>
         </repository>
         <repository>
-            <id>metersphere-public</id>
-            <url>https://repository.fit2cloud.com/repository/metersphere/</url>
+            <id>fit2cloud-public</id>
+            <url>https://repository.fit2cloud.com/repository/public/</url>
         </repository>
     </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>central</id>
-            <url>https://repo.maven.apache.org/maven2</url>
-        </pluginRepository>
-        <pluginRepository>
-            <id>metersphere-public</id>
-            <url>https://repository.fit2cloud.com/repository/metersphere/</url>
-        </pluginRepository>
-    </pluginRepositories>
-
-    <dependencyManagement>
-        <dependencies>
-            <!--Spring AI  -->
-            <dependency>
-                <groupId>org.springframework.ai</groupId>
-                <artifactId>spring-ai-bom</artifactId>
-                <version>${spring-ai.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-        </dependencies>
-    </dependencyManagement>
-
 </project>

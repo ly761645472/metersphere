@@ -84,7 +84,7 @@ curl -sSL https://github.com/metersphere/metersphere/releases/latest/download/qu
             <td>Support multi-interface scenario testing</td>
         </tr>
         <tr>
-            <td>Quickly record test script via browser plug-in</td>
+            <td>Quickly record test script via brower plug-in</td>
         </tr>
         <tr>
             <td rowspan="2">Test Report</td>
@@ -108,7 +108,7 @@ curl -sSL https://github.com/metersphere/metersphere/releases/latest/download/qu
             <td>Support parameterized testing</td>
         </tr>
         <tr>
-            <td>Quickly record test script via browser plug-in</td>
+            <td>Quickly record test script via brower plug-in</td>
         </tr>
         <tr>
             <td rowspan="4">Test Report</td>
@@ -152,13 +152,13 @@ curl -sSL https://github.com/metersphere/metersphere/releases/latest/download/qu
 
 -   Backend: [Spring Boot](https://www.tutorialspoint.com/spring_boot/spring_boot_introduction.htm)
 -   Frontend: [Vue.js](https://vuejs.org/)
--   Middleware: [MySQL](https://www.mysql.com/), [Kafka](https://kafka.apache.org/), [MinIO](https://min.io/), [Redis](https://redis.com/)
+-   Middleware: [MySQL](https://www.mysql.com/), [Kafka](https://kafka.apache.org/)
 -   Basic infrastructure: [Docker](https://www.docker.com/), [Kubernetes](https://kubernetes.io/)
 -   Test engine: [JMeter](https://jmeter.apache.org/)
 
 ## License & Copyright
 
-Copyright (c) 2014-2024 飞致云 FIT2CLOUD, All rights reserved.
+Copyright (c) 2014-2023 飞致云 FIT2CLOUD, All rights reserved.
 
 Licensed under The GNU General Public License version 3 (GPLv3)  (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
